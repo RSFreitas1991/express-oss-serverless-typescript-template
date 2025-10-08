@@ -1,5 +1,5 @@
 {
-  "name": "lambda-oss-serverless-typescript-template",
+  "name": "express-oss-serverless-typescript-template",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -22,20 +22,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RSFreitas1991/lambda-oss-serverless-typescript-template.git"
+    "url": "git+https://github.com/RSFreitas1991/express-oss-serverless-typescript-template.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/RSFreitas1991/lambda-oss-serverless-typescript-template/issues"
+    "url": "https://github.com/RSFreitas1991/express-oss-serverless-typescript-template/issues"
   },
-  "homepage": "https://github.com/RSFreitas1991/lambda-oss-serverless-typescript-template#readme",
+  "homepage": "https://github.com/RSFreitas1991/express-oss-serverless-typescript-template#readme",
   "devDependencies": {
     "@swc/cli": "^0.7.8",
     "@swc/core": "^1.13.19",
-    "@types/aws-lambda": "^8.10.152",
+    "@types/express": "^5.0.3",
     "@types/node": "^24.5.2",
     "@typescript-eslint/eslint-plugin": "^8.44.1",
     "@typescript-eslint/parser": "^8.44.1",
@@ -46,5 +46,9 @@
     "serverless-deployment-bucket": "^1.6.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "serverless-http": "^4.0.0"
   }
 }

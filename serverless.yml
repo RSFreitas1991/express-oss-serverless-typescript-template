@@ -1,4 +1,4 @@
-service: my-lambda-oss
+service: my-express-oss
 plugins:
   - serverless-deployment-bucket
 
@@ -22,11 +22,15 @@ provider:
 
 functions:
   helloWorld:
-    handler: dist/src/index.handler
+    handler: dist/src/app.handler
     timeout: 29
     events:
       - httpApi:
-          method: GET
+          method: ANY
+          path: /{proxy+}
+
+      - httpApi:
+          method: ANY
           path: /
 
 custom: ${file(./serverless/custom/variables.yml)}

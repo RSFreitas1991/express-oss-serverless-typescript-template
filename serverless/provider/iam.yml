@@ -6,7 +6,7 @@ statements:
       - dynamodb:GetItem
       - dynamodb:UpdateItem
     Resource:
-      - !Sub arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/my-lambda-oss-${sls:stage}-main-table*
+      - !Sub arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/my-express-oss-${sls:stage}-main-table*
 
   - Effect: Allow
     Action:
