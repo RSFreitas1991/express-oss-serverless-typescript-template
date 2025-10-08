@@ -1,0 +1,10 @@
+STAGE: ${sls:stage}
+NODE_ENV: ${self:custom.NODE_ENV_MAP.${sls:stage}}
+# Cognito
+#AWS_COGNITO_USER_POOL_ID: ${self:custom.AWS_COGNITO_USER_POOL_ID}
+#AWS_COGNITO_CLIENT_ID: ${self:custom.AWS_COGNITO_CLIENT_ID}
+
+# Database - URI baseada no stage atual
+#MONGODB_URI: ${self:custom.MONGODB_URI.${sls:stage}}
+#MAIN_TABLE_NAME: ${self:custom.MAIN_TABLE_NAME}
+#SNS_FEEDBACK_TOPIC_ARN: ${self:custom.SNS_FEEDBACK_TOPIC_ARN.${sls:stage}}

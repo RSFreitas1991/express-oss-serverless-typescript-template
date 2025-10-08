@@ -1,0 +1,8 @@
+node_modules
+dist
+.serverless
+.webpack
+coverage
+*.log
+.env*
+.nyc_output

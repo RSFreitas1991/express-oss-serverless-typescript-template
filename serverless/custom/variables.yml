@@ -1,0 +1,7 @@
+SERVICE_NAME_PREFIX: ${self:service}-${self:provider.stage}
+SSM_PREFIX: ${self:custom.SERVICE_NAME_PREFIX}
+DEPLOYMENT_BUCKET: my-best-deployment-bucket-${self:provider.region}
+NODE_ENV_MAP:
+  dev: development
+  prd: production
+  staging: staging

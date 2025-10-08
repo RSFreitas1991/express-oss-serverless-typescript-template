@@ -1,0 +1,50 @@
+{
+  "name": "lambda-oss-serverless-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "swc src -d dist --copy-files",
+    "build:watch": "swc src -d dist --watch --copy-files",
+    "clean": "rm -rf dist",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "dev": "npm run build:watch",
+    "prebuild": "npm run clean",
+    "predev": "npm run clean",
+    "check": "npm run type-check && npm run lint && npm run format:check",
+    "deploy:dev": "npm i && npm run build && sls deploy --stage dev --aws-profile personal",
+    "remove:dev": "sls remove --stage dev --aws-profile personal",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSFreitas1991/lambda-oss-serverless-typescript-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RSFreitas1991/lambda-oss-serverless-typescript-template/issues"
+  },
+  "homepage": "https://github.com/RSFreitas1991/lambda-oss-serverless-typescript-template#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.7.8",
+    "@swc/core": "^1.13.19",
+    "@types/aws-lambda": "^8.10.152",
+    "@types/node": "^24.5.2",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "serverless-deployment-bucket": "^1.6.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1"
+  }
+}
