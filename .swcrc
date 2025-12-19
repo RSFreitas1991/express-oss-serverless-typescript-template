@@ -5,9 +5,9 @@
       "tsx": false,
       "decorators": true
     },
-    "target": "es2020",
+    "target": "es2021",
     "loose": false,
-    "externalHelpers": false
+    "keepClassNames": true
   },
   "module": {
     "type": "commonjs"
